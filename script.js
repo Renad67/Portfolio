@@ -555,3 +555,24 @@ function showToast(message) {
       });
   });
 })();
+
+/* ─── THEME TOGGLE ───────────────────────────── */
+(function initTheme() {
+  const toggleBtn = document.getElementById("themeToggle");
+  if (!toggleBtn) return;
+
+  // Check if a user preference is already saved
+  const savedTheme = localStorage.getItem("portfolio-theme");
+  
+  // Apply saved theme on load
+  if (savedTheme === "light") {
+    document.documentElement.classList.add("light-theme");
+  }
+
+  // Listen for clicks on the toggle button
+  toggleBtn.addEventListener("click", () => {
+    const isLightMode = document.documentElement.classList.toggle("light-theme");
+    // Save to local storage
+    localStorage.setItem("portfolio-theme", isLightMode ? "light" : "dark");
+  });
+})();
