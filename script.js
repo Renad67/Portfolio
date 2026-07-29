@@ -34,7 +34,7 @@
 
   // Grow on hoverable elements
   const hoverables =
-    "a, button, .skill-tag, .cert-card, .project-card, .contact-link-card, .skill-category";
+    "a, button, .skill-tag, .cert-card, .project-card, .contact-link-card, .skill-category, .theme-toggle";
   document.querySelectorAll(hoverables).forEach((el) => {
     el.addEventListener("mouseenter", () => {
       cursor.style.transform = "translate(-50%, -50%) scale(2.5)";
@@ -338,7 +338,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       opacity: ${Math.random() * 0.25 + 0.05};
       width:  ${Math.random() * 3 + 1}px;
       height: ${Math.random() * 3 + 1}px;
-      background: ${Math.random() > 0.5 ? "var(--accent)" : "#fff"};
+      background: ${Math.random() > 0.5 ? "var(--accent)" : "var(--text-primary)"};
       left:   ${Math.random() * 100}%;
       top:    ${Math.random() * 100}%;
       animation: floatDot ${Math.random() * 12 + 8}s ease-in-out infinite;
@@ -462,24 +462,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   );
 })();
 
-/* ─── CONTACT FORM EMAIL LINK COPY ───────────── */
-(function initEmailCopy() {
-  const emailLink = document.querySelector('a[href^="mailto"]');
-  if (!emailLink) return;
-
-  // Optional: add copy-to-clipboard on long press / right-click
-  emailLink.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-    const email = emailLink.href.replace("mailto:", "");
-    navigator.clipboard
-      .writeText(email)
-      .then(() => {
-        showToast("Email copied to clipboard!");
-      })
-      .catch(() => {});
-  });
-})();
-
 /* ─── TOAST NOTIFICATION ─────────────────────── */
 function showToast(message) {
   const existing = document.querySelector(".toast");
@@ -539,14 +521,12 @@ function showToast(message) {
 
 /* ─── INITIAL LOAD ANIMATION ─────────────────── */
 (function initLoadAnimation() {
-  // Slight delay to ensure fonts loaded
   document.body.style.opacity = "0";
   document.body.style.transition = "opacity 0.5s ease";
 
   window.addEventListener("load", () => {
     document.body.style.opacity = "1";
 
-    // Trigger hero reveals immediately
     document
       .querySelectorAll(".hero .reveal-up, .hero .reveal-right")
       .forEach((el) => {
@@ -556,23 +536,32 @@ function showToast(message) {
   });
 })();
 
-/* ─── THEME TOGGLE ───────────────────────────── */
+/* ─── THEME TOGGLE (Fixed with Icon Switching) ─── */
 (function initTheme() {
   const toggleBtn = document.getElementById("themeToggle");
   if (!toggleBtn) return;
 
-  // Check if a user preference is already saved
+  const sunIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+  const moonIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
   const savedTheme = localStorage.getItem("portfolio-theme");
   
+  function updateIcon(isLight) {
+    toggleBtn.innerHTML = isLight ? moonIcon : sunIcon;
+  }
+
   // Apply saved theme on load
   if (savedTheme === "light") {
     document.documentElement.classList.add("light-theme");
+    updateIcon(true);
+  } else {
+    updateIcon(false);
   }
 
-  // Listen for clicks on the toggle button
+  // Listen for clicks
   toggleBtn.addEventListener("click", () => {
     const isLightMode = document.documentElement.classList.toggle("light-theme");
-    // Save to local storage
     localStorage.setItem("portfolio-theme", isLightMode ? "light" : "dark");
+    updateIcon(isLightMode);
   });
 })();
