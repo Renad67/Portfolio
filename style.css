@@ -1431,3 +1431,52 @@ img {
     font-size: 28px;
   }
 }
+/* === LIGHT THEME VARIABLES === */
+:root.light-theme {
+  --bg: #f8f9fa;
+  --bg-2: #f1f3f5;
+  --bg-3: #e9ecef;
+  --surface: #ffffff;
+  --surface-2: #f8f9fa;
+  --border: #dee2e6;
+  --border-light: #ced4da;
+
+  --accent: #00996b; /* Slightly darker green for visibility on light bg */
+  --accent-dim: #008059;
+  --accent-glow: rgba(0, 153, 107, 0.15);
+  --accent-glow-strong: rgba(0, 153, 107, 0.3);
+
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-muted: #868e96;
+}
+
+/* Make sure the custom terminal card in the 'About' section stays readable in light mode */
+:root.light-theme .card-terminal {
+  background: #ffffff;
+}
+:root.light-theme .c-key {
+  color: #00996b;
+}
+:root.light-theme .c-str {
+  color: #b78a00;
+}
+
+/* Theme toggle button styling */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background var(--transition), color var(--transition);
+}
+
+.theme-toggle:hover {
+  background: var(--surface-2);
+  color: var(--accent);
+}
