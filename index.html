@@ -29,9 +29,24 @@
         <li><a href="#certifications" class="nav-link">Certs</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions" style="display: flex; gap: 16px; align-items: center;">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- MOBILE MENU -->
@@ -40,9 +55,7 @@
         <li><a href="#about" class="mobile-link">About</a></li>
         <li><a href="#skills" class="mobile-link">Skills</a></li>
         <li><a href="#projects" class="mobile-link">Projects</a></li>
-        <li>
-          <a href="#certifications" class="mobile-link">Certifications</a>
-        </li>
+        <li><a href="#certifications" class="mobile-link">Certifications</a></li>
         <li><a href="#contact" class="mobile-link">Contact</a></li>
       </ul>
     </div>
@@ -80,14 +93,7 @@
             download
             class="btn-secondary"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
@@ -137,10 +143,10 @@
             <p class="about-body">
               With hands-on experience in RESTful APIs (Node.js, NestJS) and
               machine learning (deep learning, NLP, computer vision), I bring a
-              rare full-stack technical perspective. I am proficient in Python and experienced with NLP pipelines, cloud platforms (Azure), and LLM frameworks including LangChain and Hugging Face[cite: 2].
+              rare full-stack technical perspective. I am proficient in Python and experienced with NLP pipelines, cloud platforms (Azure), and LLM frameworks including LangChain and Hugging Face.
             </p>
             <p class="about-body">
-              A Digital Egypt Pioneers Initiative ML Trainee, I am passionate about applying emerging AI technologies to solve real-world business challenges, with a strong focus on scalability, model performance optimization, and cross-functional collaboration[cite: 2].
+              A Digital Egypt Pioneers Initiative ML Trainee, I am passionate about applying emerging AI technologies to solve real-world business challenges, with a strong focus on scalability, model performance optimization, and cross-functional collaboration.
             </p>
             <div class="about-meta">
               <div class="meta-item">
@@ -153,9 +159,7 @@
               </div>
               <div class="meta-item">
                 <span class="meta-label">Training</span>
-                <span class="meta-value"
-                  >Digital Egypt Pioneers Initiative · ML Track</span
-                >
+                <span class="meta-value">Digital Egypt Pioneers Initiative · ML Track</span>
               </div>
               <div class="meta-item">
                 <span class="meta-label">Also</span>
@@ -211,7 +215,7 @@
               <span class="skill-tag featured">Node.js</span>
               <span class="skill-tag featured">Express.js</span>
               <span class="skill-tag featured">NestJS</span>
-              <span class="skill-tag">Next.js[cite: 2]</span>
+              <span class="skill-tag">Next.js</span>
               <span class="skill-tag">TypeScript</span>
               <span class="skill-tag">C++</span>
               <span class="skill-tag">REST API</span>
@@ -228,12 +232,12 @@
               <span class="skill-tag featured">Python</span>
               <span class="skill-tag featured">Deep Learning</span>
               <span class="skill-tag featured">NLP</span>
-              <span class="skill-tag">LangChain[cite: 1, 2]</span>
-              <span class="skill-tag">Scikit-learn[cite: 2]</span>
-              <span class="skill-tag">Hugging Face[cite: 1, 2]</span>
-              <span class="skill-tag">Mistral[cite: 1]</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">Mistral</span>
               <span class="skill-tag">Azure AI</span>
-              <span class="skill-tag">MLOps[cite: 2]</span>
+              <span class="skill-tag">MLOps</span>
             </div>
           </div>
 
@@ -250,7 +254,7 @@
               <span class="skill-tag">Seaborn</span>
               <span class="skill-tag featured">MySQL</span>
               <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">Mongoose[cite: 2]</span>
+              <span class="skill-tag">Mongoose</span>
               <span class="skill-tag">SQL</span>
             </div>
           </div>
@@ -338,15 +342,8 @@
                     class="project-link"
                     aria-label="GitHub"
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-                      />
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
                   </a>
                 </div>
@@ -355,7 +352,7 @@
                 A secure multi-tier platform for managing home maintenance
                 services. Features JWT authentication, Role-Based Access Control
                 across three user tiers, real-time analytics dashboard, and
-                automated workflow state transitions[cite: 2, 3].
+                automated workflow state transitions.
               </p>
               <div class="project-stack">
                 <span class="stack-tag">Node.js</span>
@@ -367,24 +364,24 @@
               </div>
               <div class="project-highlights">
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Engineered a secure REST API implementing JWT authentication and RBAC to enforce strict data isolation[cite: 2, 3]
+                  <span class="highlight-icon">▸</span>Engineered a secure REST API implementing JWT authentication and RBAC to enforce strict data isolation
                 </div>
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Architected a relational MySQL database to process dynamic service requests and automate state transitions[cite: 2, 3]
+                  <span class="highlight-icon">▸</span>Architected a relational MySQL database to process dynamic service requests and automate state transitions
                 </div>
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Developed server-side algorithms to generate real-time analytics and track technician performance KPIs[cite: 2, 3]
+                  <span class="highlight-icon">▸</span>Developed server-side algorithms to generate real-time analytics and track technician performance KPIs
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 002: HealthRootz (Graduation Project) -->
+          <!-- Project 002: HealthRootz -->
           <div class="project-card reveal-up" data-delay="1">
             <div class="project-number">002</div>
             <div class="project-content">
               <div class="project-top">
-                <h3 class="project-title">HealthRootz (Graduation Project)[cite: 2]</h3>
+                <h3 class="project-title">HealthRootz (Graduation Project)</h3>
                 <div class="project-links">
                   <a
                     href="https://github.com/renadabdullah32"
@@ -392,37 +389,30 @@
                     class="project-link"
                     aria-label="GitHub"
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-                      />
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
                   </a>
                 </div>
               </div>
               <p class="project-description">
-                Developed and trained a Random Forest classification model achieving 90.38% accuracy for complex pattern recognition[cite: 2]. Integrated backend databases with embedded sensor hardware and data streaming managed by teammate Ebram, processing raw sEMG muscle signal frequencies. Planned a mobile application frontend using Flutter for real-time data monitoring[cite: 2].
+                Developed and trained a Random Forest classification model achieving 90.38% accuracy for complex pattern recognition. Integrated backend databases with embedded sensor hardware and data streaming managed by teammate Ebram, processing raw sEMG muscle signal frequencies. Planned a mobile application frontend using Flutter for real-time data monitoring.
               </p>
               <div class="project-stack">
                 <span class="stack-tag">Python</span>
-                <span class="stack-tag">Machine Learning[cite: 2]</span>
-                <span class="stack-tag">Flutter[cite: 2]</span>
+                <span class="stack-tag">Machine Learning</span>
+                <span class="stack-tag">Flutter</span>
                 <span class="stack-tag">IoT Hardware</span>
               </div>
               <div class="project-highlights">
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Developed and trained a Random Forest classification model achieving 90.38% accuracy[cite: 2]
+                  <span class="highlight-icon">▸</span>Developed and trained a Random Forest classification model achieving 90.38% accuracy
                 </div>
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Integrating hardware sensor data with backend databases[cite: 2]
+                  <span class="highlight-icon">▸</span>Integrating hardware sensor data with backend databases
                 </div>
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Planning a mobile application frontend using Flutter for real-time data monitoring[cite: 2]
+                  <span class="highlight-icon">▸</span>Planning a mobile application frontend using Flutter for real-time data monitoring
                 </div>
               </div>
             </div>
@@ -433,7 +423,7 @@
             <div class="project-number">003</div>
             <div class="project-content">
               <div class="project-top">
-                <h3 class="project-title">AI Chatbot Assistant[cite: 1, 2]</h3>
+                <h3 class="project-title">AI Chatbot Assistant</h3>
                 <div class="project-links">
                   <a
                     href="https://github.com/renadabdullah32"
@@ -441,37 +431,30 @@
                     class="project-link"
                     aria-label="GitHub"
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-                      />
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
                   </a>
                 </div>
               </div>
               <p class="project-description">
-                Developed and deployed a conversational AI chatbot using Python and Hugging Face Transformers, capable of answering domain-specific questions with contextual understanding[cite: 1, 2]. Evaluated and iteratively improved model performance by applying prompt engineering techniques, and explored LangChain fundamentals for chaining prompts and managing conversation memory[cite: 1, 2].
+                Developed and deployed a conversational AI chatbot using Python and Hugging Face Transformers, capable of answering domain-specific questions with contextual understanding. Evaluated and iteratively improved model performance by applying prompt engineering techniques, and explored LangChain fundamentals for chaining prompts and managing conversation memory.
               </p>
               <div class="project-stack">
-                <span class="stack-tag">Python[cite: 1, 2]</span>
-                <span class="stack-tag">Hugging Face[cite: 1, 2]</span>
-                <span class="stack-tag">LangChain[cite: 1, 2]</span>
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">Hugging Face</span>
+                <span class="stack-tag">LangChain</span>
                 <span class="stack-tag">LLMs</span>
               </div>
               <div class="project-highlights">
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Built a conversational AI chatbot using Python and Hugging Face models[cite: 1]
+                  <span class="highlight-icon">▸</span>Built a conversational AI chatbot using Python and Hugging Face models
                 </div>
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Applied prompt engineering techniques to improve response accuracy and relevance[cite: 1]
+                  <span class="highlight-icon">▸</span>Applied prompt engineering techniques to improve response accuracy and relevance
                 </div>
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Explored LangChain fundamentals for chaining prompts and managing conversation memory[cite: 1]
+                  <span class="highlight-icon">▸</span>Explored LangChain fundamentals for chaining prompts and managing conversation memory
                 </div>
               </div>
             </div>
@@ -482,7 +465,7 @@
             <div class="project-number">004</div>
             <div class="project-content">
               <div class="project-top">
-                <h3 class="project-title">COVID-19 Interactive Dashboard[cite: 1, 2]</h3>
+                <h3 class="project-title">COVID-19 Interactive Dashboard</h3>
                 <div class="project-links">
                   <a
                     href="https://github.com/renadabdullah32"
@@ -490,40 +473,33 @@
                     class="project-link"
                     aria-label="GitHub"
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-                      />
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
                   </a>
                 </div>
               </div>
               <p class="project-description">
                 An interactive Python dashboard tracking global COVID-19
-                statistics in real time, built to serve 500+ users. Designed and built an end-to-end data pipeline to collect, preprocess, and analyze datasets[cite: 2]. Combines
+                statistics in real time, built to serve 500+ users. Designed and built an end-to-end data pipeline to collect, preprocess, and analyze datasets. Combines
                 Matplotlib and Plotly for rich visualizations that
-                increased data accessibility by 40%[cite: 1, 2].
+                increased data accessibility by 40%.
               </p>
               <div class="project-stack">
-                <span class="stack-tag">Python[cite: 1, 2]</span>
-                <span class="stack-tag">Matplotlib[cite: 1, 2]</span>
-                <span class="stack-tag">Plotly[cite: 1, 2]</span>
-                <span class="stack-tag">Pandas[cite: 1, 2]</span>
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">Matplotlib</span>
+                <span class="stack-tag">Plotly</span>
+                <span class="stack-tag">Pandas</span>
               </div>
               <div class="project-highlights">
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Developed an interactive Python dashboard tracking global COVID-19 statistics, serving 500+ users[cite: 1]
+                  <span class="highlight-icon">▸</span>Developed an interactive Python dashboard tracking global COVID-19 statistics, serving 500+ users
                 </div>
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Leveraged Matplotlib and Plotly for dynamic visualizations, increasing data accessibility by 40%[cite: 1]
+                  <span class="highlight-icon">▸</span>Leveraged Matplotlib and Plotly for dynamic visualizations, increasing data accessibility by 40%
                 </div>
                 <div class="highlight">
-                  <span class="highlight-icon">▸</span>Applied data cleaning and analysis using Pandas and NumPy to ensure accuracy of insights[cite: 1]
+                  <span class="highlight-icon">▸</span>Applied data cleaning and analysis using Pandas and NumPy to ensure accuracy of insights
                 </div>
               </div>
             </div>
@@ -546,19 +522,19 @@
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-meta">
-                <span class="timeline-date">08/2024 – Present[cite: 3]</span>
+                <span class="timeline-date">08/2024 – Present</span>
                 <span class="timeline-type">Professional</span>
               </div>
-              <h3 class="timeline-role">Account Manager & Implementation Specialist[cite: 3]</h3>
+              <h3 class="timeline-role">Account Manager & Implementation Specialist</h3>
               <div class="timeline-company">
-                Sushi Spot Diner · Cairo, Egypt[cite: 3]
+                Sushi Spot Diner · Cairo, Egypt
               </div>
               <ul class="timeline-bullets">
                 <li>
-                  Manage end-to-end software implementations, translating complex technical requirements into actionable steps for clients and engineering teams[cite: 3].
+                  Manage end-to-end software implementations, translating complex technical requirements into actionable steps for clients and engineering teams.
                 </li>
                 <li>
-                  Troubleshoot system issues and maintain operational reliability, applying highly analytical problem-solving skills to resolve technical barriers[cite: 3].
+                  Troubleshoot system issues and maintain operational reliability, applying highly analytical problem-solving skills to resolve technical barriers.
                 </li>
               </ul>
             </div>
@@ -578,16 +554,16 @@
               </div>
               <ul class="timeline-bullets">
                 <li>
-                  Acquired practical experience in machine learning and deep learning using Microsoft Azure technologies, working on real-world AI use cases[cite: 1].
+                  Acquired practical experience in machine learning and deep learning using Microsoft Azure technologies, working on real-world AI use cases.
                 </li>
                 <li>
-                  Built and deployed NLP models on Azure and Hugging Face, including text classification and language understanding pipelines, improving processing efficiency by 15%[cite: 1].
+                  Built and deployed NLP models on Azure and Hugging Face, including text classification and language understanding pipelines, improving processing efficiency by 15%.
                 </li>
                 <li>
-                  Applied prompt engineering techniques to optimize model outputs and improve response quality across different AI tasks[cite: 1].
+                  Applied prompt engineering techniques to optimize model outputs and improve response quality across different AI tasks.
                 </li>
                 <li>
-                  Conducted in-depth data analysis and visualization using Python (NumPy, Pandas, Matplotlib, Seaborn), enhancing data clarity and insight extraction by 25%[cite: 1].
+                  Conducted in-depth data analysis and visualization using Python (NumPy, Pandas, Matplotlib, Seaborn), enhancing data clarity and insight extraction by 25%.
                 </li>
               </ul>
             </div>
@@ -598,16 +574,16 @@
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-meta">
-                <span class="timeline-date">11/2025 – 11/2025[cite: 2, 3]</span>
+                <span class="timeline-date">11/2025 – 11/2025</span>
                 <span class="timeline-type">Volunteer</span>
               </div>
-              <h3 class="timeline-role">Event Organizer[cite: 2, 3]</h3>
+              <h3 class="timeline-role">Event Organizer</h3>
               <div class="timeline-company">
-                Google Developer Groups (GDG) in Cairo Higher Institute[cite: 2, 3]
+                Google Developer Groups (GDG) in Cairo Higher Institute
               </div>
               <ul class="timeline-bullets">
                 <li>
-                  Provided collaborative leadership within a cross-functional team to plan, organize, and execute technical events, ensuring seamless logistics and attendee communication[cite: 2, 3].
+                  Provided collaborative leadership within a cross-functional team to plan, organize, and execute technical events, ensuring seamless logistics and attendee communication.
                 </li>
               </ul>
             </div>
@@ -627,22 +603,15 @@
         <div class="certs-grid certs-grid-4">
           <div class="cert-card reveal-up" data-delay="0">
             <div class="cert-icon">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
                 <line x1="8" y1="21" x2="16" y2="21" />
                 <line x1="12" y1="17" x2="12" y2="21" />
               </svg>
             </div>
             <div class="cert-content">
-              <h3 class="cert-title">Azure AI Fundamentals[cite: 1, 2, 3]</h3>
-              <p class="cert-issuer">Microsoft[cite: 1, 2, 3]</p>
+              <h3 class="cert-title">Azure AI Fundamentals</h3>
+              <p class="cert-issuer">Microsoft</p>
               <div class="cert-skills">
                 AI Services · Cognitive Services · Machine Learning
               </div>
@@ -652,21 +621,14 @@
 
           <div class="cert-card reveal-up" data-delay="1">
             <div class="cert-icon">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <polyline points="16 18 22 12 16 6" />
                 <polyline points="8 6 2 12 8 18" />
               </svg>
             </div>
             <div class="cert-content">
-              <h3 class="cert-title">Python (Basic)[cite: 3]</h3>
-              <p class="cert-issuer">HackerRank[cite: 1, 2, 3]</p>
+              <h3 class="cert-title">Python (Basic)</h3>
+              <p class="cert-issuer">HackerRank</p>
               <div class="cert-skills">
                 Python · Data Structures · Algorithms
               </div>
@@ -676,14 +638,7 @@
 
           <div class="cert-card reveal-up" data-delay="2">
             <div class="cert-icon">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M12 2L2 7l10 5 10-5-10-5z" />
                 <path d="M2 17l10 5 10-5" />
                 <path d="M2 12l10 5 10-5" />
@@ -691,7 +646,7 @@
             </div>
             <div class="cert-content">
               <h3 class="cert-title">Pandas Course</h3>
-              <p class="cert-issuer">Kaggle[cite: 1, 2]</p>
+              <p class="cert-issuer">Kaggle</p>
               <div class="cert-skills">
                 Pandas · Data Wrangling · Data Analysis
               </div>
@@ -701,25 +656,16 @@
 
           <div class="cert-card reveal-up" data-delay="3">
             <div class="cert-icon">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="10" />
-                <path
-                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                />
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
               </svg>
             </div>
             <div class="cert-content">
-              <h3 class="cert-title">Route Academy Backend Track[cite: 2, 3]</h3>
-              <p class="cert-issuer">Route Academy[cite: 2, 3]</p>
+              <h3 class="cert-title">Route Academy Backend Track</h3>
+              <p class="cert-issuer">Route Academy</p>
               <div class="cert-skills">
-                Node.js · Express.js · Nest JS · Next.js[cite: 2, 3]
+                Node.js · Express.js · Nest JS · Next.js
               </div>
             </div>
             <div class="cert-badge">ROUTE</div>
@@ -744,21 +690,9 @@
               collaborative projects. Whether you have a project in mind or just
               want to connect — my inbox is always open.
             </p>
-            <a
-              href="mailto:renadabdullah32@gmail.com"
-              class="btn-primary contact-btn"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
+            <a href="mailto:renadabdullah32@gmail.com" class="btn-primary contact-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
               Send Email
@@ -766,22 +700,10 @@
           </div>
 
           <div class="contact-links reveal-left">
-            <a
-              href="mailto:renadabdullah32@gmail.com"
-              class="contact-link-card"
-            >
+            <a href="mailto:renadabdullah32@gmail.com" class="contact-link-card">
               <div class="clc-icon">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                  />
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
               </div>
@@ -789,68 +711,24 @@
                 <span class="clc-label">Email</span>
                 <span class="clc-value">renadabdullah32@gmail.com</span>
               </div>
-              <svg
-                class="clc-arrow"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
             </a>
 
             <a href="tel:01095492007" class="contact-link-card">
               <div class="clc-icon">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.4 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6.06 6.06l.92-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                  />
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.4 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6.06 6.06l.92-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
               </div>
               <div class="clc-content">
                 <span class="clc-label">Phone</span>
                 <span class="clc-value">01095492007</span>
               </div>
-              <svg
-                class="clc-arrow"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/renadabdullah1"
-              target="_blank"
-              class="contact-link-card"
-            >
+            <a href="https://www.linkedin.com/in/renadabdullah1" target="_blank" class="contact-link-card">
               <div class="clc-icon">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                  />
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect x="2" y="9" width="4" height="12" />
                   <circle cx="4" cy="4" r="2" />
                 </svg>
@@ -859,53 +737,18 @@
                 <span class="clc-label">LinkedIn</span>
                 <span class="clc-value">linkedin.com/in/renadabdullah1</span>
               </div>
-              <svg
-                class="clc-arrow"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
             </a>
 
-            <a
-              href="https://github.com/renadabdullah32"
-              target="_blank"
-              class="contact-link-card"
-            >
+            <a href="https://github.com/renadabdullah32" target="_blank" class="contact-link-card">
               <div class="clc-icon">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-                  />
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
                 </svg>
               </div>
               <div class="clc-content">
                 <span class="clc-label">GitHub</span>
                 <span class="clc-value">github.com/renadabdullah32</span>
               </div>
-              <svg
-                class="clc-arrow"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
             </a>
           </div>
         </div>
@@ -916,27 +759,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <span class="footer-logo"
-            ><span class="logo-bracket">[</span>RA<span class="logo-bracket"
-              >]</span
-            ></span
-          >
-          <span class="footer-copy"
-            >© 2025 Renad Abdullah. All rights reserved.</span
-          >
-          <a
-            href="Renad_abdullah_CV_ML_Enhanced.pdf"
-            download
-            class="footer-cv"
-          >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
+          <span class="footer-logo">
+            <span class="logo-bracket">[</span>RA<span class="logo-bracket">]</span>
+          </span>
+          <span class="footer-copy">© 2025 Renad Abdullah. All rights reserved.</span>
+          <a href="Renad_abdullah_CV_ML_Enhanced.pdf" download class="footer-cv">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
